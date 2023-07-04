@@ -38,21 +38,19 @@ const App = () => {
             <img src={SearchIcon} alt="search" onClick={() => {}} />
           </div>
 
-            {     
-                movies?.length > 0 
-                    ? (
-                    <div className="container">
-                    {movies.map((movie) => (
-                        <MovieCard movie={movie} />
+            {movies?.length > 0 
+              ? (
+                <div className="container">
+                   {movies.map((movie) => (
+                      <MovieCard movie={movie} />
                     ))}
-                </div>) :
-                (
+                </div>
+                ) : (
                     <div className="empty">
                         <h2>No movies found</h2>
                         </div>
                 )
             }
-         
         </div>
     );
 }
